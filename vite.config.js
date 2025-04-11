@@ -1,3 +1,5 @@
+import { defineConfig } from 'vite';
+
 export default defineConfig({
-    base: '/Market-API-Test', 
+    base: '/Market-API-Test/', 
   })

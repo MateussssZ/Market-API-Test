@@ -84,7 +84,7 @@ export class SiteAPI{
       stockName.textContent = `${stockData.name} (${stockData.symbol})`;
       let currency = stockData.price_currency
       let stockPriceChange = stockData.close - stockData.open
-      let changePercent = (stockData.open / stockPriceChange) * 100
+      let changePercent = (stockPriceChange / stockData.open) * 100
         
       stockDetails.innerHTML = `
             <div class="info-item">
