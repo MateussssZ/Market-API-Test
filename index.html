@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>Доступные валюты для торга</h2>
+      <div class="currency-list" id="currencyList">
+          <div class="currency-item">
+              <span>Загрузка...</span>
+              <span class="loading"></span>
+          </div>
+      </div>
+    </div>
+    <div id="app">
+      <div class="main-content">
+        <h1>Финансовый дашборд</h1>
+        
+        <div class="exchange-selector">
+            <h2>Выберите биржу</h2>
+            <select id="exchangeSelect">
+                <option value="">-- Выберите биржу --</option>
+                <option value="XNAS">NASDAQ</option>
+                <option value="XNYS">NYSE</option>
+                <option value="BATS">Электронная биржа BATS</option>
+                <option value="XSHG">Шанхайская биржа</option>
+            </select>
+            
+            <div id="tickerSearch" style="display: none;">
+                <h3>Введите тикер акции</h3>
+                <input type="text" id="tickerInput" placeholder="Например: AAPL, MSFT, TSLA">
+                <button id="searchButton">Поиск</button>
+                <div id="errorMessage" class="error"></div>
+            </div>
+        </div>
+        
+        <div class="stock-info" id="stockInfo">
+            <h2 id="stockName"></h2>
+            <div class="info-grid" id="stockDetails"></div>
+        </div>
+    </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
