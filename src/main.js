@@ -1,4 +1,3 @@
-import './style.css'
 import { SiteAPI } from './fetcher';
 const API = new SiteAPI()
 
